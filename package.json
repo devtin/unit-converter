@@ -1,0 +1,64 @@
+{
+  "name": "unit-converter",
+  "author": "Martin Rafael Gonzalez <tin@devtin.io>",
+  "version": "1.0.0",
+  "main": "dist/unit-converter.js",
+  "module": "dist/unit-converter.esm.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "lint": "eslint --ext .js --ignore-path .gitignore client/",
+    "test": "ava --serial --verbose",
+    "test:e2e": "cucumber-js --require-module esm --tags \"not @ignore\"",
+    "test:all": "npm run test && npm run test:e2e",
+    "dev": "nuxt dev",
+    "start": "nuxt start"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "ava": "^3.3.0",
+    "babel-eslint": "^10.0.3",
+    "bluebird": "^3.7.2",
+    "chai": "^4.2.0",
+    "convert-units": "^2.3.4",
+    "cucumber": "^6.0.5",
+    "element-ui": "^2.13.0",
+    "eslint": "^6.8.0",
+    "esm": "^3.2.25",
+    "koa": "^2.11.0",
+    "lodash": "^4.17.15",
+    "postcss-nested": "^4.2.1",
+    "puppeteer": "^2.1.1",
+    "standard-version": "^7.1.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js",
+      "client/**/*.unit.js"
+    ],
+    "require": [
+      "esm"
+    ],
+    "babel": true
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "env": {
+      "es6": true
+    },
+    "globals": {
+      "BigInt": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
+  },
+  "dependencies": {
+    "nuxt": "^2.11.0"
+  }
+}
