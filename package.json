@@ -12,7 +12,8 @@
     "test:e2e": "cucumber-js --require-module esm --tags \"not @ignore\"",
     "test:all": "npm run test && npm run test:e2e",
     "dev": "nuxt dev",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "release": "standard-version"
   },
   "files": [
     "dist/*"
