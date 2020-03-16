@@ -13,8 +13,10 @@ BeforeAll({ timeout: 30000 }, async () => {
   const app = new Koa()
   await nuxt.ready()
 
-  console.log(`Building nuxt...`)
-  await new Builder(nuxt).build()
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`Building nuxt...`)
+    await new Builder(nuxt).build()
+  }
 
   app.use(ctx => {
     ctx.status = 200
