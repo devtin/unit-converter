@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/devtin/unit-converter/compare/v1.0.1...v1.0.3) (2020-03-16)
+
+
+### Bug Fixes
+
+* displays correct answer only when one is available ([1481030](https://github.com/devtin/unit-converter/commit/1481030d57c95e6c8cab2b781b5ffde14bd735ea))
+* provides 'correctAnswer' given valid inputs and response unit ([58c9005](https://github.com/devtin/unit-converter/commit/58c90052020647e4a95f7985daeb1951b1873aff))
+
 ### [1.0.2](https://github.com/devtin/unit-converter/compare/v1.0.1...v1.0.2) (2020-03-16)
 
 
