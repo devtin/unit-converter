@@ -1,7 +1,7 @@
 {
   "name": "unit-converter",
   "author": "Martin Rafael Gonzalez <tin@devtin.io>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/unit-converter.js",
   "module": "dist/unit-converter.esm.js",
   "license": "MIT",
