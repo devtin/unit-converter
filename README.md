@@ -34,7 +34,7 @@ npm run build
 ## Tests
 
 Unit and integration tests are performed using [ava](https://github.com/avajs/ava). Unit tests
-can be found with the suffix `.unit.js` in the [client/lib](./client/lib) directory. Integration tests are found
+can be found with the suffix `.unit.js` in the [client](./client) directory. Integration tests are found
 in the [test](./test) directory.
 
 End-to-end tests are performed using [cucumber](https://github.com/cucumber/cucumber-js) with [puppeteer](https://github.com/puppeteer/puppeteer)
