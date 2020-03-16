@@ -5,15 +5,12 @@
       :label="placeholder"
       v-model="selected"
       @input="$emit('input', $event)"
-      :type="isMobile ? 'number' : 'text'"
       ref="input"
       clearable
     ></el-input>
   </el-form-item>
 </template>
 <script>
-  import { mapGetters } from 'vuex'
-
   export default {
     props: {
       placeholder: String,
@@ -24,9 +21,6 @@
       return {
         selected: this.value
       }
-    },
-    computed: {
-      ...mapGetters(['isMobile'])
     },
     methods: {
       focus () {
