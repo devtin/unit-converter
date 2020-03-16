@@ -23,3 +23,8 @@ test(`Answers 'incorrect' given incorrect answers`, t => {
   t.is(converter.input(11, 'l').grade(10, 'l').message, 'incorrect')
   t.is(converter.input(100, 'F').grade(212, 'C').message, 'incorrect')
 })
+
+test(`Provides 'correctAnswer' given valid inputs and response unit`, t => {
+  t.true(converter.input(11, 'l').grade('lola', 'l').hasOwnProperty('correctAnswer'))
+  t.false(converter.input(11, 'l').grade('lola', 'lola').hasOwnProperty('correctAnswer'))
+})

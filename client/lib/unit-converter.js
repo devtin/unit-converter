@@ -28,6 +28,7 @@ export class UnitConverter {
 
     if (value === '' || isNaN(value) || isNaN(this._input.value)) {
       return {
+        correctAnswer,
         message: `incorrect`
       }
     }
