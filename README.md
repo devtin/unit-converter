@@ -5,10 +5,10 @@ This project is built using [vue.js](https://vuejs.org/) on top of [nuxt.js](htt
 
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Dev](#dev)
 - [Build](#build)
 - [Tests](#tests)
 - [Start](#start)
-- [Dev](#dev)
 - [CI/CD](#cicd)
 
 ## Requirements
@@ -21,6 +21,14 @@ From the terminal:
 ```sh
 git clone git@github.com:devtin/unit-converter.git
 cd unit-converter && npm i
+```
+
+## Dev
+
+Will run [nuxt.js](https://nuxtjs.org/) in dev mode with source files from the [client](./client) directory.
+
+```sh
+PORT=3000 npm run dev
 ```
 
 ## Build
@@ -61,14 +69,6 @@ on the given `PORT`.
 
 ```bash
 PORT=3000 npm run start
-```
-
-## Dev
-
-Will run [nuxt.js](https://nuxtjs.org/) in dev mode with source files from the [client](./client) directory.
-
-```sh
-PORT=3000 npm run dev
 ```
 
 ## CI/CD
