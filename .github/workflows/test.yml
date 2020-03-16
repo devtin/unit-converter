@@ -1,6 +1,9 @@
 name: test
-on: push
-
+on:
+  push:
+    branches:
+      - '*'         # matches every branch
+      - '!master'   # excludes master since we have a rule accepting only commits with the 'test' workflow passed!
 jobs:
   test:
     runs-on: ubuntu-latest
