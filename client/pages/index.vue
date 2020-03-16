@@ -17,7 +17,7 @@
       <el-alert
         class="info-output"
         type="info"
-        v-if="result.message === `incorrect`"
+        v-if="result.message === `incorrect` && result.correctAnswer"
       >
         correct answer would be: {{ result.correctAnswer }}
       </el-alert>
