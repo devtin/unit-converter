@@ -52,13 +52,10 @@ and can be found in the [features](./features) directory.
 # unit & integration tests
 NODE_ENV=test npm run test
 
-# test production build
-NODE_ENV=production npm run test
-
-# end to end tests
+# end to end tests (building project from 'client')
 NODE_ENV=test npm run test:e2e
 
-# e2e test production build
+# e2e test (using previously built project located in the 'dist' folder)
 NODE_ENV=production npm run test:e2e
 ```
 
