@@ -42,6 +42,8 @@
   }
 </style>
 <script>
+  import { mapGetters } from 'vuex'
+
   export default {
     props: {
       label: String,
@@ -56,59 +58,10 @@
     data () {
       return {
         unit: this.value,
-        units: [
-          {
-            label: 'Temperature',
-            options: [
-              {
-                value: `Kelvin`,
-                unitShort: `K`
-              },
-              {
-                value: `Celsius​`,
-                unitShort: `C`
-              },
-              {
-                value: `Fahrenheit`,
-                unitShort: `F`
-              },
-              {
-                value: `Rankine`,
-                unitShort: `R`
-              }
-            ]
-          },
-          {
-            label: 'Volume',
-            options: [
-              {
-                value: `​liters​`,
-                unitShort: `l`
-              },
-              {
-                value: `​tablespoons​`,
-                unitShort: `Tbs`
-              },
-              {
-                value: `​cubic-inches`,
-                unitShort: `in3`
-              },
-              {
-                value: `cups​`,
-                unitShort: `cup`
-              },
-              {
-                value: `cubic-feet`,
-                unitShort: `ft3`
-              },
-              {
-                value: `gallons`,
-                unitShort: `gal`
-              }
-            ]
-          }
-        ]
       }
+    },
+    computed: {
+      ...mapGetters(['units'])
     },
     watch: {
       value (v) {
